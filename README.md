@@ -1,13 +1,13 @@
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/github/explore/main/topics/whatsapp/whatsapp.png" alt="Logo" width="120">
+  <img src="https://raw.githubusercontent.com/upload-file-lab/fileupload6/main/uploads/1758737905875.jpeg" alt="Logo" width="120">
 </p>
 
 <h1 align="center">rhnx-bot — WhatsApp Bot Base</h1>
 
 <p align="center">
-  <a href="https://github.com/USERNAME/NAMA-REPO/stargazers"><img src="https://img.shields.io/github/stars/USERNAME/NAMA-REPO?style=social" alt="GitHub stars"></a>
-  <a href="https://github.com/USERNAME/NAMA-REPO/blob/main/LICENSE"><img src="https://img.shields.io/github/license/USERNAME/NAMA-REPO?color=blue" alt="License"></a>
+  <a href="https://github.com/rhnxofficial/rhnx-bot/stargazers"><img src="https://img.shields.io/github/stars/rhnxofficial/rhnx-bot?style=social" alt="GitHub stars"></a>
+  <a href="https://github.com/rhnxofficial/rhnx-bot/blob/main/LICENSE"><img src="https://img.shields.io/github/license/rhnxofficial/rhnx-bot?color=blue" alt="License"></a>
   <img src="https://img.shields.io/badge/node-%3E=18.x-brightgreen" alt="Node.js Version">
 </p>
 
