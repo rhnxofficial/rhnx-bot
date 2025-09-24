@@ -3,7 +3,7 @@
   <img src="https://raw.githubusercontent.com/upload-file-lab/fileupload6/main/uploads/1758737905875.jpeg" alt="Logo">
 </p>
 
-<h1 align="center">rhnx-bot WhatsApp Bot Base</h1>
+<h1 align="center">rhnx-bot</h1>
 
 <p align="center">
   <a href="https://github.com/rhnxofficial/rhnx-bot/stargazers"><img src="https://img.shields.io/github/stars/rhnxofficial/rhnx-bot?style=social" alt="GitHub stars"></a>
