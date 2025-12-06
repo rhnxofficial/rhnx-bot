@@ -1,20 +1,33 @@
 # rhnx-bot
 
-![Thumbnail](https://raw.githubusercontent.com/rhnxofficial/Uploader/main/uploader/rhnx-3QBi.jpg)
+<div align="center">
+  <img src="https://raw.githubusercontent.com/rhnxofficial/Uploader/main/uploader/rhnx-3QBi.jpg" width="350">
+</div>
 
 Bot WhatsApp berbasis Node.js dan Baileys MD dengan fitur lengkap seperti downloader (YT, IG, TikTok), sistem register & limit, captcha anti-spam, serta berbagai utilitas command. Dibuat untuk penggunaan pribadi maupun publik dengan struktur code modular dan mudah dikembangkan.
 
 ---
 
-## Kontak & Sosial Media
+## <div align="center">Kontak & Sosial Media</div>
 
-Untuk pertanyaan, percobaan bot, request fitur, atau kerja sama, silakan hubungi atau ikuti kami melalui sosial media berikut:
+<div align="center">
+Untuk pertanyaan, percobaan bot, request fitur, atau kerja sama, silakan hubungi kami melalui sosial media berikut:
+</div>
 
-### YouTube  
-[![YouTube](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://youtube.com/)
+<br>
 
-### WhatsApp  
-[![WhatsApp](https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/)
+<div align="center">
 
-### TikTok  
-[![TikTok](https://img.shields.io/badge/TikTok-000000?style=for-the-badge&logo=tiktok&logoColor=white)](https://tiktok.com/@)
+<a href="https://www.youtube.com/@rhnxofficial">
+  <img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white">
+</a>
+
+<a href="https://chat.whatsapp.com/EcaZKuqXYGk8DL35OUCetp">
+  <img src="https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white">
+</a>
+
+<a href="https://www.tiktok.com/@rhnxofficial">
+  <img src="https://img.shields.io/badge/TikTok-000000?style=for-the-badge&logo=tiktok&logoColor=white">
+</a>
+
+</div>
