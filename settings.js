@@ -88,8 +88,8 @@ global.api = {
 
 global.key = {
   rhnx: "rhnx-530297",
-  gemini: "AIzaSyAQ_P5U9JSvjZk2MGO8DQayHe1Z1yftQZI",
-  elevenlabs: "sk_30d7114a2da7ef8237e2ab21c3d25a08275823eecbb8c616",
+  gemini: "",
+  elevenlabs: "",
   tokenGithub: "" //buat sendiri sementara
 };
 
