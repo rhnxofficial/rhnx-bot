@@ -6,7 +6,7 @@ export default {
   description: "Menampilkan informasi script bot dari GitHub",
 
   async run(m, { conn }) {
-    let apiUrl = "https://api.github.com/repos/rhnxofficial/rhnx-bot-esm";
+    let apiUrl = "https://api.github.com/repos/rhnxofficial/rhnx-bot";
 
     try {
       let res = await fetch(apiUrl);
