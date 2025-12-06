@@ -53,7 +53,7 @@ export default {
   alias: ["help", "cmd"],
   description: "Menampilkan daftar command bot",
   access: { register: true },
-  run: async (m, { conn, args, isOwner, prefix }) => {
+  run: async (m, { conn, args, isOwner,isPremium, prefix }) => {
     const dataInfo = global.db.data.others?.["newinfo"];
     const info = dataInfo ? dataInfo.info : "";
     const timeInfo = dataInfo ? dataInfo.lastinfo : "tidak ada";
@@ -93,13 +93,13 @@ export default {
             description: plugin.description || "Tidak ada deskripsi"
           });
 
-          if (plugin.access?.private) {
-            if (!privateCategories[folder]) privateCategories[folder] = [];
-            privateCategories[folder].push({
-              name: plugin.name,
-              description: plugin.description || "Tidak ada deskripsi"
-            });
-          }
+          if (plugin.access?.private || ((isOwner || isPremium) && plugin.access?.nocmdprivate)) {
+  if (!privateCategories[folder]) privateCategories[folder] = [];
+  privateCategories[folder].push({
+    name: plugin.name,
+    description: plugin.description || "Tidak ada deskripsi"
+  });
+}
 
           if (plugin.access?.groupstore) {
             if (!storeCategories[folder]) storeCategories[folder] = [];
