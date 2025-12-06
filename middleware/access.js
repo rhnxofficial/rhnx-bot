@@ -59,7 +59,12 @@ export default async function checkAccess(m, commandConfig, extras) {
       return false;
     }
   }
-
+  
+  // NO CMD PRIVATE
+  if (access.nocmdprivate && !m.isGroup) {
+    return false;
+  }
+  
   // LOADING
   if (access.loading && (args?.length > 0 || q?.length > 0)) {
     if (!user) {
@@ -108,11 +113,6 @@ export default async function checkAccess(m, commandConfig, extras) {
   // GROUP ONLY
   if (access.group && !m.isGroup) {
     m.reply("⛔ Fitur ini hanya bisa digunakan di grup.");
-    return false;
-  }
-
-  // NO CMD PRIVATE
-  if (access.nocmdprivate && !m.isGroup) {
     return false;
   }
 
