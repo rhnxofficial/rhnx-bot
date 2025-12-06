@@ -5,7 +5,6 @@ import { styleText, styleSans, styleSmallCaps } from "./media/text/styleText.js"
 import { readJson } from "./lib/myfunc.js";
 import chalk from "chalk";
 
-// FUNCTION CODE
 let d = new Date();
 let locale = "id";
 let currentYear = d.getFullYear();
