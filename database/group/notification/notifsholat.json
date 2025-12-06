@@ -1,0 +1,27 @@
+{
+  "jadwal": {
+    "tanggal": "Jumat, 05/12/2025",
+    "imsak": "03:57",
+    "subuh": "04:07",
+    "terbit": "05:26",
+    "dhuha": "05:55",
+    "dzuhur": "11:47",
+    "ashar": "15:12",
+    "maghrib": "18:00",
+    "isya": "19:15",
+    "date": "2025-12-05",
+    "lokasi": "KOTA JAKARTA",
+    "daerah": "DKI JAKARTA"
+  },
+  "sudahKirimTanggal": {
+    "subuh": "2025-12-05",
+    "dzuhur": "2025-12-05",
+    "ashar": "2025-12-05",
+    "maghrib": "2025-12-05",
+    "isya": "2025-12-05"
+  },
+  "meta": {
+    "lastFetch": "2025-12-05T21:48:22+07:00",
+    "lastFetchStatus": "ok"
+  }
+}
