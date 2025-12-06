@@ -60,12 +60,10 @@ export default async function checkAccess(m, commandConfig, extras) {
     }
   }
   
-  // NO CMD PRIVATE
   if (access.nocmdprivate && !m.isGroup) {
     return false;
   }
   
-  // LOADING
   if (access.loading && (args?.length > 0 || q?.length > 0)) {
     if (!user) {
       user = global.db.data.users[m.sender] = { limit: 30, limitgame: 30 };
@@ -77,7 +75,6 @@ export default async function checkAccess(m, commandConfig, extras) {
     await sendResponse("loading");
   }
 
-  // NO JADI BOT
   if (access.nojadibot && extras?.conn?.isJadiBot) {
     m.reply(
       "Maaf, fitur ini tidak bisa digunakan dari jadibot. Hanya bot utama yang dapat menjalankannya."
@@ -85,7 +82,6 @@ export default async function checkAccess(m, commandConfig, extras) {
     return false;
   }
 
-  // OWNER + PRIVATE
   if (access.owner && access.private) {
     if (!isOwner) {
       await sendResponse("owner");
@@ -98,31 +94,26 @@ export default async function checkAccess(m, commandConfig, extras) {
     return true;
   }
 
-  // OWNER
   if (access.owner && !isOwner) {
     await sendResponse("owner");
     return false;
   }
 
-  // PREMIUM
   if (access.premium && !isPremium) {
     m.reply("⛔ Maaf, fitur ini khusus untuk pengguna Premium.");
     return false;
   }
 
-  // GROUP ONLY
   if (access.group && !m.isGroup) {
     m.reply("⛔ Fitur ini hanya bisa digunakan di grup.");
     return false;
   }
 
-  // PRIVATE ONLY
   if (access.private && m.isGroup) {
     await sendResponse("private");
     return false;
   }
 
-  // GROUP STORE
   if (access.groupstore) {
     if (!m.isGroup) {
       m.reply("⛔ Fitur ini hanya bisa digunakan di grup.");
@@ -134,25 +125,21 @@ export default async function checkAccess(m, commandConfig, extras) {
     }
   }
 
-  // NO CMD STORE
   if (access.nocmdstore && m.isGroup && getGroupStoreIds().includes(m.chat)) {
     m.reply("⛔ Fitur ini tidak bisa digunakan di Group Store.");
     return false;
   }
 
-  // ADMIN
   if (access.admin && !m.isAdmin) {
     m.reply("⛔ Hanya bisa diakses oleh Admin grup.");
     return false;
   }
 
-  // BOT ADMIN
   if (access.botadmin && !m.isBotAdmin) {
     m.reply("⛔ Bot harus menjadi admin untuk menjalankan perintah ini.");
     return false;
   }
 
-  // GAME MODE
   if (access.game) {
     let chat = global.db?.data?.chats?.[m.chat];
     if (!chat || !chat.game) {
@@ -161,7 +148,6 @@ export default async function checkAccess(m, commandConfig, extras) {
     }
   }
 
-  // LIMIT GAME
   if (access.glimit) {
     let user = global.db.data.users[m.sender];
     if (!user) {
@@ -177,7 +163,6 @@ export default async function checkAccess(m, commandConfig, extras) {
     user.limitgame -= 1;
   }
 
-  // LIMIT
   if (access.limit && ((args && args.length > 0) || (q && q.length > 0))) {
     try {
       let user = global.db.data.users[m.sender];
