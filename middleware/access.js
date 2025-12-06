@@ -61,7 +61,12 @@ export default async function checkAccess(m, commandConfig, extras) {
   }
   
   if (access.nocmdprivate && !m.isGroup) {
-    return false;
+  if (!isOwner && !isPremium) {
+    await conn.sendAI(m.chat,
+      styleText(`⚠️ Hai ${m.pushName}!\nFitur ini hanya bisa digunakan di grup.\nKalau ingin pakai di chat pribadi, kamu harus menjadi *Premium* atau *Owner*.\n💡 Ketik *.buypremium* untuk info upgrade.`),m
+    );
+    return false; 
+  }
   }
   
   if (access.loading && (args?.length > 0 || q?.length > 0)) {
