@@ -170,17 +170,27 @@ function styleSmallCaps(text) {
 }
 
 function transformText(text, charMap) {
-  const urlRegex = /(https?:\/\/[^\s]+)/g;
-  return text
-    .split(urlRegex)
-    .map((part) => {
-      if (urlRegex.test(part)) return part;
-      return part
-        .split("")
-        .map((c) => charMap[c] || c)
-        .join("");
-    })
-    .join("");
+  if (!text) return "";
+  const splitRegex = /((?:```[\s\S]*?```)|(?:`[^`]*`)|(?:https?:\/\/[^\s]+))/g;
+
+  const parts = text.split(splitRegex);
+
+  return parts.map(part => {
+    
+    const isProtected = 
+        part.startsWith("```") ||
+        (part.startsWith("`") && part.endsWith("`") && part.length > 1) || 
+        /^https?:\/\//.test(part); 
+
+    if (isProtected) {
+        return part; 
+    }
+
+    return part
+      .split("")
+      .map((c) => charMap[c] || c)
+      .join("");
+  }).join("");
 }
 
 export function styleText(text, style = global.db?.data?.settings?.style || "normal") {
