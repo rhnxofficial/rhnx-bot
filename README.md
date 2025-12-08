@@ -1,37 +1,37 @@
-# rhnx-bot
-
+<!-- HEADER -->
 <div align="center">
-  <img src="https://raw.githubusercontent.com/rhnxofficial/Uploader/main/uploader/rhnx-3QBi.jpg" width="350">
+  
+# 🌐 RHNX-BOT
+### WhatsApp Bot • Node.js • Baileys MD
+
+<img src="https://raw.githubusercontent.com/rhnxofficial/Uploader/main/uploader/rhnx-3QBi.jpg" width="330">
+
+**Clean • Simple • Powerful**  
+Bot WhatsApp dengan fitur lengkap, stabil, dan mudah dikembangkan.
+
 </div>
-
-Bot WhatsApp berbasis Node.js dan Baileys MD dengan fitur lengkap seperti downloader (YT, IG, TikTok), sistem register & limit, captcha anti-spam, serta berbagai utilitas command. Dibuat untuk penggunaan pribadi maupun publik dengan struktur code modular dan mudah dikembangkan.
-
-<br>
-
-> **Catatan:** Script ini masih dalam tahap pengerjaan dan pengembangan. Beberapa fitur mungkin akan berubah, diperbaiki, atau ditingkatkan ke depannya.
 
 ---
 
-## <div align="center">Kontak & Sosial Media</div>
+# 💡 Tentang Bot  
+RHNX-BOT adalah bot WhatsApp Multi-Device berbasis **Node.js + Baileys MD** dengan struktur modular sehingga mudah untuk ditambah fitur, diubah, atau dikembangkan.
 
-<div align="center">
-Untuk pertanyaan, percobaan bot, request fitur, atau kerja sama, silakan hubungi kami melalui sosial media berikut:
-</div>
+Fitur utama:
+- Downloader (YT/IG/FB/TikTok/DSB)
+- Auto AI (Private & Group)
+- Sistem register & limit
+- Captcha anti-spam
+- Sticker otomatis
+- Tools & Utilities berguna
+- Flow private + hook sistem
+- Struktur file rapi & mudah dipahami
 
-<br>
+> Script masih dalam proses pengembangan aktif.
 
-<div align="center">
+---
 
-<a href="https://www.youtube.com/@rhnxofficial">
-  <img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white">
-</a>
+# 🚀 Cara Instal & Menjalankan
 
-<a href="https://chat.whatsapp.com/EcaZKuqXYGk8DL35OUCetp">
-  <img src="https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white">
-</a>
-
-<a href="https://www.tiktok.com/@rhnxofficial">
-  <img src="https://img.shields.io/badge/TikTok-000000?style=for-the-badge&logo=tiktok&logoColor=white">
-</a>
-
-</div>
+## 1️⃣ Clone Repository
+```bash
+git clone https://github.com/rhnxofficial/rhnx-bot
