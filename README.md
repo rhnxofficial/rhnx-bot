@@ -7,6 +7,8 @@
 RHNX-BOT adalah bot WhatsApp Multi-Device berbasis **Node.js + Baileys MD** dengan struktur modular sehingga mudah dikembangkan dan dipelajari.
 
 <br>
+
+---
 ### ✨ Fitur Utama
 - 🎥 Downloader (YouTube, Instagram, TikTok, Facebook, dll)
 -  Auto AI (Private & Group)
