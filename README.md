@@ -1,37 +1,50 @@
-<!-- HEADER -->
+# rhnx-bot
+
 <div align="center">
-  
-# 🌐 RHNX-BOT
-### WhatsApp Bot • Node.js • Baileys MD
-
-<img src="https://raw.githubusercontent.com/rhnxofficial/Uploader/main/uploader/rhnx-3QBi.jpg" width="330">
-
-**Clean • Simple • Powerful**  
-Bot WhatsApp dengan fitur lengkap, stabil, dan mudah dikembangkan.
-
+  <img src="https://raw.githubusercontent.com/rhnxofficial/Uploader/main/uploader/rhnx-3QBi.jpg" width="350">
 </div>
 
+RHNX-BOT adalah bot WhatsApp Multi-Device berbasis **Node.js + Baileys MD** dengan struktur modular sehingga mudah dikembangkan dan dipelajari.
+
+<br>
+### ✨ Fitur Utama
+- 🎥 Downloader (YouTube, Instagram, TikTok, Facebook, dll)
+-  Auto AI (Private & Group)
+-  Menfes (session)
+-  Sistem register + limit
+-  Captcha anti-spam
+-  Keamanan & Antimedia (categories)
+-  Tools & utilities
+-  StyleTeks Dan Bahasa Bisa Di Ubah
+-  Tersedia Feature JadiBot
+-  Support Button ✅
+-  Sistem owner/premium/user
+-  Struktur code rapi & mudah di-edit
+
+> **Catatan:** Script ini masih dalam tahap pengerjaan dan pengembangan. Beberapa fitur mungkin akan berubah, diperbaiki, atau ditingkatkan ke depannya.
+
 ---
 
-# 💡 Tentang Bot  
-RHNX-BOT adalah bot WhatsApp Multi-Device berbasis **Node.js + Baileys MD** dengan struktur modular sehingga mudah untuk ditambah fitur, diubah, atau dikembangkan.
+## <div align="center">Kontak & Sosial Media</div>
 
-Fitur utama:
-- Downloader (YT/IG/FB/TikTok/DSB)
-- Auto AI (Private & Group)
-- Sistem register & limit
-- Captcha anti-spam
-- Sticker otomatis
-- Tools & Utilities berguna
-- Flow private + hook sistem
-- Struktur file rapi & mudah dipahami
+<div align="center">
+Untuk Informasi,pertanyaan, percobaan bot, request fitur, atau kerja sama, silakan hubungi kami melalui sosial media berikut:
+</div>
 
-> Script masih dalam proses pengembangan aktif.
+<br>
 
----
+<div align="center">
 
-# 🚀 Cara Instal & Menjalankan
+<a href="https://www.youtube.com/@rhnxofficial">
+  <img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white">
+</a>
 
-## 1️⃣ Clone Repository
-```bash
-git clone https://github.com/rhnxofficial/rhnx-bot
+<a href="https://chat.whatsapp.com/EcaZKuqXYGk8DL35OUCetp">
+  <img src="https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white">
+</a>
+
+<a href="https://www.tiktok.com/@rhnxofficial">
+  <img src="https://img.shields.io/badge/TikTok-000000?style=for-the-badge&logo=tiktok&logoColor=white">
+</a>
+
+</div>
