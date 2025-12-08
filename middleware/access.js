@@ -52,10 +52,29 @@ export default async function checkAccess(m, commandConfig, extras) {
   let user = global.db.data.users[m.sender];
   if (access.register) {
     if (!user || !user.registered) {
-      m.reply(
-        "⚠️ Kamu Perlu Daftar.\n" +
-          "Silakan Daftar Terlebih Dahulu Agar Bisa Menggunakan Bot dengan mengetik: *.register*"
-      );
+      let teks = "🚩 Ups! Sepertinya kamu belum terdaftar 😅\n\nsilahkan *.register* dulu dengan klik *button* Di Bawah Ini dulu ya biar bisa main dengan bot ini!"
+  conn.sendInteractive(
+  m.chat,
+  {
+    text: styleText(teks),
+    footer: bot.name,
+
+    interactiveButtons: [
+      {
+        name: "quick_reply",
+        buttonParamsJson: JSON.stringify({
+          display_text: "Register",
+          id: ".register"
+        })
+      }
+    ]
+  },
+  {
+    quoted: m,
+    mentions: [jid],
+    useAI: true 
+  }
+);
       return false;
     }
   }
