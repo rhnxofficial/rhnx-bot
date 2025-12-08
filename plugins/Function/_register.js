@@ -29,11 +29,36 @@ export default {
           setTimeout(() => delete conn.botReplying[m.chat], 2000);
 
           delete conn.captcha[m.sender];
-          return m.reply(`✅ *Registrasi berhasil!*
+              m.react('✅')
+           let teks = (
+  `Woohoo! Registrasi sukses! 🎊\n\n` +
+  `Hai *${m.pushName}*, selamat datang di dunia *RHNX*!\n` +
+  `Sekarang kamu bisa main-main dengan semua fitur bot.\n` +
+  `klik *button* di bawah untuk mulai menjelajah keseruan yang menunggu! 🚀`
+);
+       return conn.sendInteractive(
+  m.chat,
+  {
+    text: styleText(teks),
+    footer: bot.name,
 
-Selamat ${m.pushName} Sekarang Anda Dapat Menggunakan Bot Silahkan Ketik *.menu* Untuk Melihat Daftar Fitur Yang Ada Di *RHNX*`);
+    interactiveButtons: [
+      {
+        name: "quick_reply",
+        buttonParamsJson: JSON.stringify({
+          display_text: "Menu",
+          id: ".menu"
+        })
+      }
+    ]
+  },
+  {
+    quoted: fkontak,
+    mentions: [m.sender],
+    useAI: true
+  }
+)
         }
-
         if (session.type === "unreg") {
           user.registered = false;
           user.name = "";
