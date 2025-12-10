@@ -4,33 +4,32 @@
   <img src="https://raw.githubusercontent.com/rhnxofficial/Uploader/main/uploader/rhnx-3QBi.jpg" width="350">
 </div>
 
-RHNX-BOT adalah bot WhatsApp Multi-Device berbasis **Node.js + Baileys MD** dengan struktur modular sehingga mudah dikembangkan dan dipelajari.
+RHNX-BOT is a Multi-Device WhatsApp bot based on **Node.js + Baileys MD** with a modular structure making it easy to develop and learn.
 
 <br>
 
 ---
-### ✨ Fitur Utama
--  Downloader
--  Support Button 
--  Auto AI (Private & Group)
--  Simi Ai Group
--  Notifsholat & Autosholat
--  Menfes (session)
--  Sistem register + limit
--  Captcha anti-spam
--  Keamanan & Antimedia (categories)
--  Tools & utilities
--  StyleTeks Dan Bahasa Bisa Di Ubah
--  Tersedia Feature JadiBot
--  Sistem owner/premium/user
--  Struktur code rapi & mudah di-edit
-
+### ✨ Main Features
+- Downloader
+- Support Button
+- Auto AI (Private & Group)
+- Simi AI Group
+- Prayer Notifications & Auto Prayer
+- Menfes (session)
+- Registration system + limits
+- Anti-spam captcha
+- Security & Anti-media (categories)
+- Tools & utilities
+- Text Style and Language Customizable
+- JadiBot Feature Available
+- Owner/Premium/User System
+- Neat & Easy-to-Edit Code Structure
 ---
 
 ## <div align="center">Kontak & Sosial Media</div>
 
 <div align="center">
-Untuk Informasi,pertanyaan, percobaan bot, request fitur, atau kerja sama, silakan hubungi kami melalui sosial media berikut:
+For information, questions, bot trials, feature requests, or collaborations, please contact us via the following social media:
 </div>
 
 <br>
