@@ -14,6 +14,7 @@ RHNX-BOT adalah bot WhatsApp Multi-Device berbasis **Node.js + Baileys MD** deng
 -  Support Button 
 -  Auto AI (Private & Group)
 -  Simi Ai Group
+-  Notifsholat & Autosholat
 -  Menfes (session)
 -  Sistem register + limit
 -  Captcha anti-spam
@@ -23,8 +24,6 @@ RHNX-BOT adalah bot WhatsApp Multi-Device berbasis **Node.js + Baileys MD** deng
 -  Tersedia Feature JadiBot
 -  Sistem owner/premium/user
 -  Struktur code rapi & mudah di-edit
-
-> **Catatan:** Script ini masih dalam tahap pengerjaan dan pengembangan. Beberapa fitur mungkin akan berubah, diperbaiki, atau ditingkatkan ke depannya.
 
 ---
 
@@ -42,7 +41,7 @@ Untuk Informasi,pertanyaan, percobaan bot, request fitur, atau kerja sama, silak
   <img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white">
 </a>
 
-<a href="https://chat.whatsapp.com/EcaZKuqXYGk8DL35OUCetp">
+<a href="https://whatsapp.com/channel/0029VaAyQPOAjPXPIzpWKX3K">
   <img src="https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white">
 </a>
 
