@@ -71,7 +71,7 @@ export default async function checkAccess(m, commandConfig, extras) {
   },
   {
     quoted: m,
-    mentions: [jid],
+    mentions: [m.sender],
     useAI: true 
   }
 );
