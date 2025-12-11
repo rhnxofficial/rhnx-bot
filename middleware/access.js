@@ -81,9 +81,29 @@ export default async function checkAccess(m, commandConfig, extras) {
   
   if (access.nocmdprivate && !m.isGroup) {
   if (!isOwner && !isPremium) {
-    await conn.sendAI(m.chat,
-      styleText(`⚠️ Hai ${m.pushName}!\nFitur ini hanya bisa digunakan di grup.\nKalau ingin pakai di chat pribadi, kamu harus menjadi *Premium* atau *Owner*.\n💡 Ketik *.buypremium* untuk info upgrade.`),m
-    );
+    let Tek = styleText(`⚠️ Hai ${m.pushName}!\nFitur ini hanya bisa digunakan di grup.\nKalau ingin pakai di chat pribadi, kamu harus menjadi *Premium* atau *Owner*.\n💡 Ketik *.buypremium* untuk info upgrade.`);
+    conn.sendInteractive(
+  m.chat,
+  {
+    text: Tek,
+    footer: bot.name,
+
+    interactiveButtons: [
+      {
+        name: "cta_url",
+        buttonParamsJson: JSON.stringify({
+          display_text: "Join Group",
+          url: sosmed.whatsapp
+        })
+      }
+    ]
+  },
+  {
+    quoted: m,
+    mentions: [m.sender],
+    useAI: true 
+  }
+);
     return false; 
   }
   }
