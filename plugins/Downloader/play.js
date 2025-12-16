@@ -51,7 +51,7 @@ export default {
       );
     } catch (e) {
       console.error(e);
-      setReply("❌ Terjadi kesalahan saat memproses permintaan.");
+      m.reply("❗ Terjadi kesalahan saat memproses permintaan.");
     }
   }
 };
