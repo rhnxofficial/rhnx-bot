@@ -31,6 +31,7 @@ import CFonts from "cfonts";
 import { loadAllJadiBot } from "./lib/jadibot.js";
 import { connectionUpdate, clearConsole } from "./lib/connection.js";
 import notifSholat from "./lib/notifSholat.js";
+import { notifGcAlarm, notifGcOpenClose, notifGcTugas } from "./middleware/function.js";
 import { memberUpdate, groupUpdate } from "./middleware/group.js";
 import * as simple from "./lib/simple.js";
 import handler from "./handler.js";
@@ -254,6 +255,21 @@ const connectToWhatsApp = async () => {
 
   setTimeout(daily, notifSholat.msToMidnight());
 
+  // Group Alarm
+  setInterval(async () => {
+    await notifGcAlarm(conn);
+  }, 60 * 1000);
+
+  // group openclose
+  setInterval(async () => {
+    await notifGcOpenClose(conn);
+  }, 60 * 1000);
+
+  // Group sendTugas
+  setInterval(async () => {
+    await notifGcTugas(conn);
+  }, 60 * 1000);
+  
   function clockString(ms) {
     let d = isNaN(ms) ? "--" : Math.floor(ms / 86400000);
     let h = isNaN(ms) ? "--" : Math.floor(ms / 3600000) % 24;
