@@ -168,9 +168,9 @@ export default async (conn, m, chatUpdate) => {
         : [];
     const q = args.join(" ");
 
-    // BANCHAT
+    / BANCHAT
     const isBanchat = isGroup ? db.data.chats[m.chat].banchat : false;
-    if (isGroup && !isPremium && !m.isAdmin && isBanchat && !itsMe && !isOwner && !isAntiSpam) {
+    if (isGroup && !isPremium && !m.isAdmin && isBanchat && !itsMe && !isOwner) {
       return;
     }
     // === GLOBAL LANGUAGE ===
