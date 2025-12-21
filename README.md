@@ -29,7 +29,8 @@ Bot ini menggunakan **Baileys MD** sebagai core WhatsApp API dan dikembangkan de
 -  Notifikasi Sholat & Auto Pengingat
 -  Menfes (berbasis sesi)
 -  Sistem Registrasi + Limit Pengguna
--  Anti-Spam dengan Captcha
+-  Anti-Spam
+-  Mengubah Group Store & Non Store
 -  Sistem Keamanan & Anti Media (berdasarkan kategori)
 -  Tools & Utilities
 -  Custom Text Style & Bahasa
@@ -37,19 +38,6 @@ Bot ini menggunakan **Baileys MD** sebagai core WhatsApp API dan dikembangkan de
 -  Sistem Owner / Premium / User
 -  Struktur kode rapi & mudah diedit
 -  Performa stabil & ringan
-
----
-
-## Struktur Project
-Struktur folder dibuat terorganisir agar mudah dikembangkan:
-
----
-
-## Teknologi yang Digunakan
-- Node.js
-- Baileys MD
-- JavaScript (ESM)
-- JSON Database
 
 ---
 
