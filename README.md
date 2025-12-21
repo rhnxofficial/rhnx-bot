@@ -10,7 +10,7 @@ Bot WhatsApp Multi-Device berbasis <b>Node.js</b> dan <b>Baileys MD</b> dengan s
 
 ---
 
-## 📌 Tentang RHNX-BOT
+## Tentang RHNX-BOT
 **RHNX-BOT** adalah script bot WhatsApp Multi-Device yang dirancang untuk:
 - Mudah dipelajari oleh pemula
 - Mudah dikembangkan oleh developer
@@ -22,30 +22,30 @@ Bot ini menggunakan **Baileys MD** sebagai core WhatsApp API dan dikembangkan de
 ---
 
 ## ✨ Fitur Utama
-- 📥 Downloader (berbagai platform)
-- 🔘 Support Button & Interactive Message
-- 🤖 Auto AI (Private & Group)
-- 🧠 Simi AI (Group)
-- 🕌 Notifikasi Sholat & Auto Pengingat
-- 💌 Menfes (berbasis sesi)
-- 📝 Sistem Registrasi + Limit Pengguna
-- 🧩 Anti-Spam dengan Captcha
-- 🔐 Sistem Keamanan & Anti Media (berdasarkan kategori)
-- 🛠️ Tools & Utilities
-- 🎨 Custom Text Style & Bahasa
-- 🔄 Fitur JadiBot
-- 👑 Sistem Owner / Premium / User
-- 📂 Struktur kode rapi & mudah diedit
-- ⚡ Performa stabil & ringan
+-  Downloader (berbagai platform)
+-  Support Button & Interactive Message
+-  Auto AI (Private & Group)
+-  Simi AI (Group)
+-  Notifikasi Sholat & Auto Pengingat
+-  Menfes (berbasis sesi)
+-  Sistem Registrasi + Limit Pengguna
+-  Anti-Spam dengan Captcha
+-  Sistem Keamanan & Anti Media (berdasarkan kategori)
+-  Tools & Utilities
+-  Custom Text Style & Bahasa
+-  Fitur JadiBot
+-  Sistem Owner / Premium / User
+-  Struktur kode rapi & mudah diedit
+-  Performa stabil & ringan
 
 ---
 
-## 🧩 Struktur Project
+## Struktur Project
 Struktur folder dibuat terorganisir agar mudah dikembangkan:
 
 ---
 
-## ⚙️ Teknologi yang Digunakan
+## Teknologi yang Digunakan
 - Node.js
 - Baileys MD
 - JavaScript (ESM)
@@ -61,7 +61,7 @@ Struktur folder dibuat terorganisir agar mudah dikembangkan:
 
 ---
 
-## 📞 Kontak & Sosial Media
+## Kontak & Sosial Media
 
 <div align="center">
 Untuk informasi, pertanyaan, uji coba bot, request fitur, atau kerja sama, silakan hubungi kami melalui media sosial berikut:
@@ -88,6 +88,6 @@ Untuk informasi, pertanyaan, uji coba bot, request fitur, atau kerja sama, silak
 ---
 
 <p align="center">
-<b>© RHNX OFFICIAL</b><br>
+<b>© RHNX</b><br>
 Dikembangkan dengan ❤️ untuk komunitas
 </p>
