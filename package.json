@@ -1,0 +1,47 @@
+{
+  "name": "rhnx-bot",
+  "version": "1.0.0",
+  "description": "WhatsApp Bot menggunakan Baileys",
+  "main": "main.js",
+  "type": "module",
+  "scripts": {
+    "start": "npx prettier --write . && node main.js"
+  },
+  "keywords": [
+    "whatsapp",
+    "bot",
+    "baileys",
+    "rhnx"
+  ],
+  "author": "RHNX",
+  "license": "MIT",
+  "dependencies": {
+    "@ffmpeg-installer/ffmpeg": "^1.1.0",
+    "@google/genai": "^1.25.0",
+    "@hapi/boom": "^10.0.1",
+    "@iamtraction/google-translate": "^2.0.1",
+    "archiver": "^7.0.1",
+    "baileys": "6.7.21",
+    "cfonts": "^3.2.0",
+    "chalk": "^4.1.2",
+    "child_process": "^1.0.2",
+    "chokidar": "^4.0.3",
+    "file-type": "^21.0.0",
+    "fluent-ffmpeg": "^2.1.3",
+    "form-data": "^4.0.4",
+    "fs-extra": "^11.3.1",
+    "lowdb": "^7.0.1",
+    "moment-timezone": "^0.6.0",
+    "os": "^0.1.2",
+    "path": "^0.12.7",
+    "pino": "^9.9.5",
+    "qrcode-terminal": "^0.12.0",
+    "spinnies": "^0.5.1",
+    "string-similarity": "^4.0.4",
+    "util": "^0.12.5",
+    "wa-sticker-formatter": "^4.4.4"
+  },
+  "devDependencies": {
+    "prettier": "^3.6.2"
+  }
+}

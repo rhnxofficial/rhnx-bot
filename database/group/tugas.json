@@ -1,0 +1,28 @@
+[
+  {
+    "id": 1,
+    "groupId": "120363422885655437@g.us",
+    "time": "22:37",
+    "title": "belajar",
+    "message": "ngewe vyna",
+    "media": {
+      "url": "https://raw.githubusercontent.com/rhnxofficial/Uploader/main/uploader/rhnx-qhyr.mp3",
+      "type": "document"
+    },
+    "createdAt": "2025-12-16 22:35:22",
+    "lastTrigger": "2025-12-16"
+  },
+  {
+    "id": 2,
+    "groupId": "120363422885655437@g.us",
+    "time": "22:53",
+    "title": "belajar",
+    "message": "ngewe vyna ahhhh",
+    "media": {
+      "url": "https://raw.githubusercontent.com/rhnxofficial/Uploader/main/uploader/rhnx-n9la.mp3",
+      "type": "audio"
+    },
+    "createdAt": "2025-12-16 22:50:01",
+    "lastTrigger": "2025-12-16"
+  }
+]

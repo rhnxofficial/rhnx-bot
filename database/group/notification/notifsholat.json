@@ -1,0 +1,27 @@
+{
+  "jadwal": {
+    "tanggal": "Senin, 22/12/2025",
+    "imsak": "04:04",
+    "subuh": "04:14",
+    "terbit": "05:33",
+    "dhuha": "06:03",
+    "dzuhur": "11:55",
+    "ashar": "15:21",
+    "maghrib": "18:09",
+    "isya": "19:25",
+    "date": "2025-12-22",
+    "lokasi": "KOTA JAKARTA",
+    "daerah": "DKI JAKARTA"
+  },
+  "sudahKirimTanggal": {
+    "subuh": "2025-12-21",
+    "dzuhur": "2025-12-21",
+    "ashar": "2025-12-21",
+    "maghrib": "2025-12-21",
+    "isya": "2025-12-21"
+  },
+  "meta": {
+    "lastFetch": "2025-12-22T00:46:00+07:00",
+    "lastFetchStatus": "ok"
+  }
+}
