@@ -30,11 +30,10 @@ export default {
     }
 
     const menfesDB = readMenfes();
-
-    // status false = sedang dalam sesi menfes
+    
     const sedangMenfes = Object.values(menfesDB).find((x) => {
       if (x.status === false) {
-        // Cek pengirim (selalu @s.whatsapp.net)
+        
         if (x.dari === m.sender) return true;
 
         // Cek penerima (selalu @lid)
@@ -43,9 +42,8 @@ export default {
       return false;
     });
 
-    // Jika salah satu (pengirim/penerima) sedang dalam sesi menfes → AI berhenti
     if (sedangMenfes) {
-      return; // AI tidak merespon selama menfes berlangsung
+      return; 
     }
     const gameList = ["capatcha"];
 
@@ -66,10 +64,8 @@ export default {
     const pickRandom = (arr) => arr[Math.floor(Math.random() * arr.length)];
     const sleep = (ms) => new Promise((res) => setTimeout(res, ms));
 
-    // -------------------- SESSION HANDLER --------------------
-
     const systemPrompt = generatePrompt(m);
-    // -------------------- SEND AI --------------------
+    
     const kirimPesan = async (teks) => {
       try {
         const res = await axios.post(
@@ -84,7 +80,6 @@ export default {
       }
     };
 
-    // -------------------- REPLY AI --------------------
     const replyAI = async (text, useVN = false) => {
       const getQuotedContext = (msg) => {
         try {
@@ -131,7 +126,6 @@ export default {
       return conn.sendAI(m.chat, styleText(output), m);
     };
 
-    // -------------------- STICKER --------------------
     const replySticker = async () => {
       const file = "./database/storage/sticker.json";
       if (!fs.existsSync(file)) return;
@@ -143,7 +137,6 @@ export default {
         await conn.sendMessage(m.chat, { sticker: { url: pick.urlSticker } }, { quoted: m });
     };
 
-    // -------------------- RANDOM AUDIO --------------------
     const replyAudio = async () => {
       const file = "./database/group/simi/vn.json";
       if (!fs.existsSync(file)) return;
@@ -159,7 +152,6 @@ export default {
         );
     };
 
-    // -------------------- MAIN HANDLER --------------------
     try {
       const mType = Object.keys(m.message || {})[0];
       const isText = ["conversation", "extendedTextMessage"].includes(mType);
