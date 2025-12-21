@@ -24,6 +24,7 @@ Bot WhatsApp Multi-Device berbasis <b>Node.js</b> dan <b>Baileys MD</b> dengan s
 -  Tools & Utilities
 -  Custom Text Style & Bahasa
 -  Fitur JadiBot
+-  Fitur Games 
 -  Sistem Owner / Premium / User
 -  Struktur kode rapi & mudah diedit
 -  Performa stabil & ringan
