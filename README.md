@@ -10,17 +10,6 @@ Bot WhatsApp Multi-Device berbasis <b>Node.js</b> dan <b>Baileys MD</b> dengan s
 
 ---
 
-## Tentang RHNX-BOT
-**RHNX-BOT** adalah script bot WhatsApp Multi-Device yang dirancang untuk:
-- Mudah dipelajari oleh pemula
-- Mudah dikembangkan oleh developer
-- Memiliki sistem fitur yang modular & terstruktur
-- Cocok untuk kebutuhan personal maupun publik
-
-Bot ini menggunakan **Baileys MD** sebagai core WhatsApp API dan dikembangkan dengan pendekatan clean code agar mudah dimodifikasi.
-
----
-
 ## ✨ Fitur Utama
 -  Downloader (berbagai platform)
 -  Support Button & Interactive Message
