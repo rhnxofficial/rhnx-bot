@@ -1,1 +1,112 @@
-[]
+{
+  "data": [],
+  "users": {
+    "6281316643491@s.whatsapp.net": {
+      "id": "6281316643491@s.whatsapp.net",
+      "name": "Raihan Fadillah",
+      "email": "",
+      "date": "Minggu 21 Desember 2025",
+      "lastseen": 1766346576677,
+      "hit": 1,
+      "exp": 0,
+      "level": 0,
+      "lastLevelNotify": 0,
+      "autolevelup": true,
+      "balance": 30,
+      "money": 30,
+      "lastclaim": 0,
+      "serial": "G98Q",
+      "registered": false,
+      "role": "Beginner",
+      "grade": "Newbie",
+      "premium": false,
+      "premiumsince": "",
+      "premiumend": "",
+      "limit": 30,
+      "limitgame": 30,
+      "limitResetTime": null,
+      "pasangan": [],
+      "putusPending": null,
+      "putusTime": 0,
+      "afk": -1,
+      "afkReason": "",
+      "sticker": {}
+    }
+  },
+  "chats": {
+    "120363422885655437@g.us": {
+      "id": "120363422885655437@g.us",
+      "name": "🤖 Ʀ-Bσƚ ヅ",
+      "hit": 1,
+      "welcome": false,
+      "groupupdate": false,
+      "updategempa": false,
+      "antispam": true,
+      "autosholat": false,
+      "notifsholat": false,
+      "antimedia": {
+        "all": false,
+        "audio": false,
+        "image": false,
+        "video": false,
+        "sticker": false,
+        "link": false,
+        "linkgc": false,
+        "linkch": false,
+        "tagswgc": false
+      },
+      "blacklist": "",
+      "banstik": {},
+      "banchat": false,
+      "simi": true,
+      "game": false,
+      "sewa": false,
+      "sewasince": "",
+      "sewaends": "",
+      "type": "group"
+    }
+  },
+  "chanel": {},
+   "blockcmd": [],
+  "antispam": [
+    {
+      "id": "6281316643491",
+      "last": 1766346589457,
+      "spamCount": 0
+    }
+  ],
+  "banned": [],
+  "settings": {
+    "status": 1766346576675,
+    "multi": true,
+    "prefix": "!",
+    "sarancmd": false,
+    "autoBio": true,
+    "public": true,
+    "style": "sans"
+  },
+  "dashboard": {
+    "lastResetDate": "2025-12-22",
+    "systemStart": "2025-12-21T19:49:38.360Z",
+    "totalCommands": 1,
+    "successCount": 1,
+    "errorCount": 0,
+    "commandStats": {
+      "setstyle": 1
+    },
+    "successHistory": [
+      {
+        "name": "setstyle",
+        "user": "Raihan Fadillah",
+        "time": "02:49:38"
+      }
+    ],
+    "errorHistory": []
+  },
+  "toxic": [],
+  "others": {
+    "runtime": {  "runtime": 1766346577592,
+      "lastTime": 1766346603321
+    }
+  }
+}
