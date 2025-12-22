@@ -1,11 +1,28 @@
 import fetch from "node-fetch";
 
-const OWNER = dataPanel.owner;
-const REPO = dataPanel.repo;
-const PATH = dataPanel.path;
-const GH_URL = `https://api.github.com/repos/${OWNER}/${REPO}/contents/${PATH}`;
+const OWNER = dataPanel?.owner;
+const REPO = dataPanel?.repo;
+const PATH = dataPanel?.path;
+
+const GH_URL =
+  OWNER && REPO && PATH ? `https://api.github.com/repos/${OWNER}/${REPO}/contents/${PATH}` : null;
+
+function isGithubReady() {
+  return (
+    dataPanel &&
+    typeof dataPanel.tokenGH === "string" &&
+    dataPanel.tokenGH.trim().length > 0 &&
+    OWNER &&
+    REPO &&
+    PATH
+  );
+}
 
 async function getBuyerData() {
+  if (!isGithubReady()) {
+    throw new Error("GitHub config / token belum lengkap");
+  }
+
   const res = await fetch(GH_URL, {
     headers: {
       Authorization: `Bearer ${dataPanel.tokenGH}`,
@@ -13,16 +30,21 @@ async function getBuyerData() {
     }
   });
 
-  if (!res.ok) throw new Error("Gagal ambil data GitHub");
+  if (!res.ok) {
+    throw new Error(`Gagal ambil data GitHub (${res.status})`);
+  }
 
   const json = await res.json();
+
   return {
     sha: json.sha,
-    data: JSON.parse(Buffer.from(json.content, "base64").toString())
+    data: JSON.parse(Buffer.from(json.content, "base64").toString("utf-8"))
   };
 }
 
 async function saveBuyerData(data, sha, message) {
+  if (!isGithubReady()) return;
+
   const content = Buffer.from(JSON.stringify(data, null, 2)).toString("base64");
 
   const res = await fetch(GH_URL, {
@@ -32,10 +54,16 @@ async function saveBuyerData(data, sha, message) {
       Accept: "application/vnd.github+json",
       "Content-Type": "application/json"
     },
-    body: JSON.stringify({ message, content, sha })
+    body: JSON.stringify({
+      message,
+      content,
+      sha
+    })
   });
 
-  if (!res.ok) throw new Error("Gagal simpan data GitHub");
+  if (!res.ok) {
+    throw new Error(`Gagal simpan data GitHub (${res.status})`);
+  }
 }
 
 function diffDays(expired) {
@@ -88,11 +116,16 @@ async function deletePanelFull(panelData) {
 }
 
 async function panelWatcher(conn) {
+  if (!isGithubReady()) {
+    console.log("⏸ Panel watcher dilewati (GitHub token belum diisi)");
+    return;
+  }
+
   try {
     const { data, sha } = await getBuyerData();
     let updated = false;
 
-    const ownerJid = global.owner.contact?.[0]?.replace(/[^0-9]/g, "") + "@s.whatsapp.net";
+    const ownerJid = global.owner?.contact?.[0]?.replace(/[^0-9]/g, "") + "@s.whatsapp.net";
 
     for (let i = data.length - 1; i >= 0; i--) {
       const panelData = data[i];
@@ -101,7 +134,7 @@ async function panelWatcher(conn) {
 
       if (sisaHari <= 0) {
         const deleted = await deletePanelFull(panelData);
-        if (!deleted) continue; 
+        if (!deleted) continue;
 
         data.splice(i, 1);
         updated = true;
@@ -110,31 +143,33 @@ async function panelWatcher(conn) {
 
         await conn.sendMessage(userJid, {
           text:
-            `❌ *PANEL EXPIRED*\n\n` +
-            `Panel kamu telah *berakhir* dan sudah dihapus otomatis.\n\n` +
-            `📅 Expired : ${panelData.expired}\n\n` +
-            `Terima kasih 🙏`
+            styleText(`🛑 *Panel Expired*
+Panel kamu telah *berakhir* dan sudah dihapus otomatis.
+📅 Expired : ${panelData.expired}
+ Terima kasih 🙏`)
         });
 
-        await conn.sendMessage(ownerJid, {
-          text:
-            `🗑 *PANEL DIHAPUS*\n\n` +
-            `👤 User : ${panelData.buyer_name}\n` +
-            `🖥 RAM : ${panelData.data.ram}\n` +
-            `📅 Expired : ${panelData.expired}`
-        });
+        if (ownerJid) {
+          await conn.sendMessage(ownerJid, {
+            text:
+              styleText(`🗑 *Panel Dihapus*👤 User : ${panelData.buyer_name}
+🖥 RAM : ${panelData.data?.ram}
+📅 Expired : ${panelData.expired}`)
+          });
+        }
 
         continue;
       }
 
-      if (sisaHari <= 3 && sisaHari > 0 && panelData.data.notification === false) {
+      if (sisaHari <= 3 && sisaHari > 0 && panelData.data?.notification === false) {
+          
         await conn.sendMessage(userJid, {
           text:
-            `⚠️ *PANEL AKAN EXPIRED*\n\n` +
-            `Halo *${panelData.buyer_name}*,\n` +
-            `Panel kamu akan berakhir dalam *${sisaHari} hari*.\n\n` +
-            `📅 Expired : ${panelData.expired}\n\n` +
-            `Silakan lakukan perpanjangan 🙏`
+            styleText(`⚠️ *Panel Akan Expired*
+Halo *${panelData.buyer_name}*
+Panel kamu akan berakhir dalam *${sisaHari} hari*.
+📅 Expired : ${panelData.expired}
+Silakan lakukan perpanjangan 🙏`)
         });
 
         panelData.data.notification = true;
@@ -147,7 +182,7 @@ async function panelWatcher(conn) {
       console.log("✅ Panel watcher sukses");
     }
   } catch (err) {
-    console.error("❌ Panel watcher fatal:", err);
+    console.error("❌ Panel watcher fatal:", err.message);
   }
 }
 
@@ -157,11 +192,10 @@ export default {
   description: "Auto notif H-3 & auto delete panel expired",
 
   async before(m, { conn }) {
+    if (!isGithubReady()) return;
+
     if (!global.panelWatcherInterval) {
-      global.panelWatcherInterval = setInterval(
-        () => panelWatcher(conn),
-        60 * 1000 
-      );
+      global.panelWatcherInterval = setInterval(() => panelWatcher(conn), 60 * 1000);
     }
   }
 };
