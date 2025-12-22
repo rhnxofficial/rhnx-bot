@@ -21,9 +21,12 @@ export default {
       const time = moment().tz("Asia/Jakarta").format("HH:mm");
 
       const msgText = m.budy?.trim() || "";
-      if (!msgText) return false;
+if (!msgText) return false;
 
-      const strawish = msgText.split(" ")[0].toLowerCase();
+const words = msgText.split(/\s+/);
+if (words.length !== 1) return false;
+
+const strawish = words[0].toLowerCase();
 
       const now = Date.now();
       const cooldown = 5000;
@@ -31,7 +34,7 @@ export default {
       const responseType = normalize(settings.respontype || "text");
 
       async function sendvn(url) {
-        await conn.sendMessage(chatId, { audio: { url }, mimetype: "audio/mpeg" }, { quoted: m });
+        await conn.sendMessage(chatId, { audio: { url }, mimetype: "audio/mpeg",ptt:true }, { quoted: m });
       }
 
       const sendResponse = async (category) => {
