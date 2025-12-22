@@ -4,7 +4,7 @@ import { saveToGithub } from "../../lib/saveToGithub.js";
 export default {
   name: "2gb",
   description: "Buat panel 2GB + support quoted + simpan buyer ke GitHub",
-  access: { storewithprivate: true, owner: true },
+  access: { storewithprivate: true, resellerpanel: true },
 
   run: async (m, { conn, args }) => {
     try {
