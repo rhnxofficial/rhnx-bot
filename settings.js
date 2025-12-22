@@ -53,7 +53,7 @@ global.system = {
   pairingCode: true,
   pairingNumber: "628××××", // nomor bot didie
   runWith: "pterodactyl",
-  prettier: true, // untuk rapihin code
+  prettier: false, // untuk rapihin code
   Intervalmsg: 1000
 };
 
