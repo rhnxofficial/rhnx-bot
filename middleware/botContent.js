@@ -28,7 +28,8 @@ export const teks = {
   owner: ["Ga boleh ya kak...", "Hanya owner yang bisa melakukan ini", "Kamu bukan owner nih"],
   araara: ["Ara Ara", "Ara ara", "ara"],
   bot: ["Bot", "bot", "Bott", "bott"],
-  salam: ["p", "P", "Ppp", "pp"],
+  gasalam: ["p", "P", "Ppp", "pp"],
+   salam: ["assalamualaikum", "Assalamualaikum", "Mikum", "mikum"],
   siang: ["Selamat siang", "selamat siang", "koniciwa", "Siang", "siang"],
   pagi: ["Selamat pagi", "selamat pagi", "Ohayou", "Pagi", "pagi"],
   malam: ["Selamat malam", "selamat miang", "Oyasumi", "Malam", "malam"],
@@ -44,65 +45,63 @@ export const teks = {
 export const vn = {
   toxic: [
     // dosa pantex
-    "https://raw.githubusercontent.com/Rangelofficial/Uploade-db/main/uploader/1735078893207.mp3",
+    "https://raw.githubusercontent.com/rhnxofficial/Uploader/main/uploader/rhnx-o1LD.opus",
     // heeh
     "https://raw.githubusercontent.com/rhnxofficial/Uploader/main/uploader/rhnx-BJQG.opus",
     // jangan toxic om
-    "https://raw.githubusercontent.com/Rangelofficial/Uploade-db/main/uploader/1735079034571.mp3"
+    "https://raw.githubusercontent.com/rhnxofficial/Uploader/main/uploader/rhnx-hJPc.opus"
   ],
   menu: [
     // jj menu
-    "https://raw.githubusercontent.com/Rangelofficial/Uploade-db/main/uploader/1735463128872.mp3",
-    "https://raw.githubusercontent.com/Rangelofficial/Uploade-db/main/uploader/1735463188399.mp3",
-    "https://raw.githubusercontent.com/rhnxofficial/Uploader/main/uploader/rhnx-K1bJ.opus"
+      "https://raw.githubusercontent.com/rhnxofficial/Uploader/main/uploader/rhnx-K1bJ.opus"
   ],
   owner: [
     // ga ada
-    "https://raw.githubusercontent.com/Rangelofficial/Uploade-db/main/uploader/1735079122237.mp3",
+    "https://raw.githubusercontent.com/rhnxofficial/Uploader/main/uploader/rhnx-EUPE.opus",
     // gaboleh
-    "https://raw.githubusercontent.com/Rangelofficial/Uploade-db/main/uploader/1735079151914.mp3",
+    "https://raw.githubusercontent.com/rhnxofficial/Uploader/main/uploader/rhnx-Viyq.opus",
     // gamau
-    "https://raw.githubusercontent.com/Rangelofficial/Uploade-db/main/uploader/1735079176281.mp3"
+    "https://raw.githubusercontent.com/rhnxofficial/Uploader/main/uploader/rhnx-9nKY.opus"
   ],
   araara: [
     // ara ara
-    "https://raw.githubusercontent.com/Rangelofficial/Uploade-db/main/uploader/1735079339321.mp3",
+    "https://raw.githubusercontent.com/rhnxofficial/Uploader/main/uploader/rhnx-rGha.opus",
     // ara koplok
-    "https://raw.githubusercontent.com/Rangelofficial/Uploade-db/main/uploader/1735079308614.mp3"
+    "https://raw.githubusercontent.com/rhnxofficial/Uploader/main/uploader/rhnx-epzp.opus"
   ],
   bot: [
     // ada apa kak
     "https://raw.githubusercontent.com/rhnxofficial/Uploader/main/uploader/rhnx-ERJd.opus",
     // iya kak
-    "https://raw.githubusercontent.com/Rangelofficial/Uploade-db/main/uploader/1735079705038.mp3",
+    "https://raw.githubusercontent.com/rhnxofficial/Uploader/main/uploader/rhnx-rH8C.opus",
     // kenapa kak
-    "https://raw.githubusercontent.com/Rangelofficial/Uploade-db/main/uploader/1735079750288.mp3",
+    "https://raw.githubusercontent.com/rhnxofficial/Uploader/main/uploader/rhnx-wVWq.opus",
     // oyy
-    "https://raw.githubusercontent.com/Rangelofficial/Uploade-db/main/uploader/1735079791762.mp3",
+    "https://raw.githubusercontent.com/rhnxofficial/Uploader/main/uploader/rhnx-rbNI.opus",
     // ngomong apaan sih
-    "https://raw.githubusercontent.com/Rangelofficial/Uploade-db/main/uploader/1735079832258.mp3",
+    "https://raw.githubusercontent.com/rhnxofficial/Uploader/main/uploader/rhnx-F8xx.opus",
     // lu siapa njir
-    "https://raw.githubusercontent.com/Rangelofficial/Uploade-db/main/uploader/1735079865610.mp3"
+    "https://raw.githubusercontent.com/rhnxofficial/Uploader/main/uploader/rhnx-3VbW.opus"
   ],
   salam: [
     // waalaikumsalam
-    "https://raw.githubusercontent.com/Rangelofficial/Uploade-db/main/uploader/1735079965592.mp3"
+    "https://raw.githubusercontent.com/rhnxofficial/Uploader/main/uploader/rhnx-m4cQ.opus"
   ],
   spam: [
     // spam kak
-    "https://raw.githubusercontent.com/Rangelofficial/Uploade-db/main/uploader/1735080035325.mp3"
+    "https://raw.githubusercontent.com/rhnxofficial/Uploader/main/uploader/rhnx-p95Y.opus"
   ],
   pagi: [
     // selamat pagi
-    "https://raw.githubusercontent.com/Rangelofficial/Uploade-db/main/uploader/1735080171985.mp3"
+    "https://raw.githubusercontent.com/rhnxofficial/Uploader/main/uploader/rhnx-Gyt3.opus"
   ],
   siang: [
     // selamat siang
-    "https://raw.githubusercontent.com/Rangelofficial/Uploade-db/main/uploader/1735080118571.mp3"
+    "https://raw.githubusercontent.com/rhnxofficial/Uploader/main/uploader/rhnx-TdJP.opus"
   ],
   malam: [
     // selamat malam
-    "https://raw.githubusercontent.com/Rangelofficial/Uploade-db/main/uploader/1735080171985.mp3"
+    "https://raw.githubusercontent.com/rhnxofficial/Uploader/main/uploader/rhnx-TloF.opus"
   ],
   kawai: [
     // kawaii desu
@@ -110,9 +109,9 @@ export const vn = {
   ],
   love: [
     // lopyutu
-    "https://raw.githubusercontent.com/Rangelofficial/Uploade-db/main/uploader/1735080673767.mp3",
+    "https://raw.githubusercontent.com/rhnxofficial/Uploader/main/uploader/rhnx-ybb5.opus",
     // lopyu kambing
-    "https://raw.githubusercontent.com/Rangelofficial/Uploade-db/main/uploader/1735080706602.mp3"
+    "https://raw.githubusercontent.com/rhnxofficial/Uploader/main/uploader/rhnx-PJpr.opus"
   ]
 };
 
