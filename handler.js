@@ -411,51 +411,20 @@ export default async (conn, m, chatUpdate) => {
           .sendMessage(target, { text: styleSans(`${errorMsg}`) }, { quoted: m })
           .catch(() => {});
       }
-    } else if (isCmd) {
-      const allCommands = Object.values(plugins)
-        .filter((p) => !p.type || p.type === "command")
-        .flatMap((p) => [p.name, ...(p.alias || [])])
-        .filter(Boolean);
+      } else if (isCmd) {
+  const allCommands = Object.values(plugins)
+    .filter((p) => !p.type || p.type === "command")
+    .flatMap((p) => [p.name, ...(p.alias || [])])
+    .filter(Boolean);
 
-      const { bestMatch } = stringSimilarity.findBestMatch(command, allCommands);
-      const similarity = (bestMatch.rating * 100).toFixed(0);
+  const { bestMatch } = stringSimilarity.findBestMatch(command, allCommands);
 
-      if (bestMatch.rating >= 0.4) {
-        const replyText = `Command *${usedPrefix}${command}* tidak ditemukan\nMungkin yang kamu maksud adalah *${usedPrefix}${bestMatch.target}*`;
+  if (bestMatch.rating >= 0.4) {
+    const replyText = `Command *${usedPrefix}${command}* tidak ditemukan\nMungkin yang kamu maksud adalah *${usedPrefix}${bestMatch.target}*`;
 
-        const settings = global.db?.data?.settings || {};
-        const responseType = (settings.respontype || "text").toLowerCase();
-
-        switch (responseType) {
-          case "vn":
-            if (vn.error?.length) {
-              const vnUrl = getRandom(vn.cmd);
-              await conn.sendMessage(
-                m.chat,
-                { audio: { url: vnUrl }, mimetype: "audio/mpeg", ptt: true },
-                { quoted: m }
-              );
-            } else {
-              await setReply(replyText);
-            }
-            break;
-
-          case "sticker":
-            if (stik.error?.length) {
-              const stikerUrl = getRandom(stik.cmd);
-              await conn.sendMessage(m.chat, { sticker: { url: stikerUrl } }, { quoted: m });
-            } else {
-              await setReply(replyText);
-            }
-            break;
-
-          case "text":
-          default:
-            await m.reply(replyText);
-            break;
-        }
-      }
-    }
+    await m.reply(replyText);
+  }
+}
     // 3️⃣ after
     for (let p of Object.values(plugins)) {
       if (typeof p.globalAfter === "function") {
