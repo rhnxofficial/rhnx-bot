@@ -1,6 +1,6 @@
 "use strict";
 import fs from "fs";
-import { uploadToGithub } from "../../lib/uploader.js";
+import { uploadToRHNX } from "../../lib/uploader.js";
 
 export default {
   name: "addvideo",
@@ -26,7 +26,9 @@ export default {
     try {
       const filePath = await m.quoted.downloadAndSave();
       const buffer = fs.readFileSync(filePath);
-      const urlVideo = await uploadToGithub(buffer);
+      const diUplod = await uploadToRHNX(buffer,'permanent');
+      const urlVideo = diUplod.url;
+      
       videoData.push({
         name,
         urlVideo
