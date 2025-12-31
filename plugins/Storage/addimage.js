@@ -1,6 +1,6 @@
 "use strict";
 import fs from "fs";
-import { uploadToGithub } from "../../lib/uploader.js";
+import { uploadToRHNX } from "../../lib/uploader.js";
 
 export default {
   name: "addimage",
@@ -26,9 +26,9 @@ export default {
     try {
       const filePath = await m.quoted.downloadAndSave();
       const buffer = fs.readFileSync(filePath);
-
-      const urlImage = await uploadToGithub(buffer);
-
+      const diUplod = await uploadToRHNX(buffer,'permanent');
+      const urlImage = diUplod.url;
+      
       imageData.push({
         name,
         urlImage
