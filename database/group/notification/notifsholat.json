@@ -1,0 +1,29 @@
+{
+  "jadwal": {
+    "tanggal": "Kamis, 26/03/2026",
+    "imsak": "04:31",
+    "subuh": "04:41",
+    "terbit": "05:53",
+    "dhuha": "06:20",
+    "dzuhur": "12:02",
+    "ashar": "15:14",
+    "maghrib": "18:04",
+    "isya": "19:12",
+    "date": "2026-03-26",
+    "lokasi": "KOTA JAKARTA",
+    "daerah": "DKI JAKARTA"
+  },
+  "sudahKirimTanggal": {
+    "sahur": "2026-03-26",
+    "imsak": "2026-03-26",
+    "subuh": "2026-03-26",
+    "dzuhur": "2026-03-25",
+    "ashar": "2026-03-25",
+    "maghrib": "2026-03-25",
+    "isya": "2026-03-25"
+  },
+  "meta": {
+    "lastFetch": "2026-03-26T08:49:48+07:00",
+    "lastFetchStatus": "ok"
+  }
+}
