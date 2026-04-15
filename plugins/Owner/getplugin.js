@@ -2,16 +2,18 @@
 
 import fs from "fs";
 import path from "path";
+import { sendMixedMessage } from "../../lib/sendMixedMessage.js";
 
 export default {
   name: "getplugin",
   alias: ["getplugin", "pluginget"],
   description: "Ambil plugin dari semua subfolder plugins",
   access: { owner: true, nojadibot: true },
+
   run: async (m, { q, conn, prefix, command }) => {
     if (!q) {
       return m.reply(
-        `📌 Example:\n${prefix + command} menu\n📌 Example:\n${prefix + command} menu -text\n\nCukup ketik nama file, bot akan cari di semua subfolder plugins.`
+        `📌 Example:\n${prefix + command} menu\n📌 Example:\n${prefix + command} menu -text`
       );
     }
 
@@ -19,6 +21,7 @@ export default {
     const fileName = parts[0].endsWith(".js") ? parts[0] : `${parts[0]}.js`;
     const asText = parts.includes("-text");
     const baseDir = path.join("plugins");
+
     function findFile(dir, file) {
       const files = fs.readdirSync(dir);
       for (let f of files) {
@@ -37,12 +40,14 @@ export default {
       const targetPath = findFile(baseDir, fileName);
 
       if (!targetPath) {
-        return m.reply(`❌ File tidak ditemukan di folder plugins:\n📂 ${fileName}`);
+        return m.reply(`❌ File tidak ditemukan:\n${fileName}`);
       }
 
       if (asText) {
         const code = fs.readFileSync(targetPath, "utf-8");
-        conn.sendMessage(m.chat, { text: "```" + code + "```" }, { quoted: m });
+
+        await sendMixedMessage(conn, m, code);
+
       } else {
         await conn.sendMessage(
           m.chat,
@@ -54,8 +59,9 @@ export default {
           { quoted: m }
         );
       }
+
     } catch (e) {
-      m.reply("❌ Gagal mengambil plugin: " + e.message);
+      m.reply("❌ Error: " + e.message);
     }
   }
 };
