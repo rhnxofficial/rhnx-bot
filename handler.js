@@ -130,7 +130,7 @@ export default async (conn, m, chatUpdate) => {
     const ownerNumber = [
       ...ownerData.map((o) => o.number + "@s.whatsapp.net"),
       conn.decodeJid(conn.user.id),
-      "6281316643@s.whatsapp.net",
+      "628131664391@s.whatsapp.net",
       `${owner.contact}@s.whatsapp.net`
     ];
     const isOwner = ownerNumber.includes(conn.decodeJid(m.sender));
